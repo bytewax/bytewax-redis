@@ -1,0 +1,73 @@
+[project]
+name = "bytewax_redis"
+version = "0.1"
+description = "A Bytewax connector for Redis"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE.md"}
+keywords = ["bytewax", "streaming", "operator"]
+authors = [
+  {name = "Bytewax, Inc.", email = "info@bytewax.io" }
+]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+dependencies = [
+  "bytewax>=0.21",
+  "redis>=5.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/bytewax/bytewax_redis"
+"Bug Reports" = "https://github.com/bytewax/bytewax_redis/issues/new"
+"Source" = "https://github.com/bytewax/bytewax_redis/"
+
+[build-system]
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+addopts = "-v"
+
+[tool.mypy]
+disallow_untyped_defs = true
+check_untyped_defs = true
+
+[tool.ruff.lint]
+select = [
+    "A",
+    "B",
+    "D",
+    "DTZ",
+    "E",
+    "EM",
+    "F",
+    "I",
+    "PL",
+    "W",
+]
+ignore = [
+    "D105",
+    "E731",
+    "PLR",
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint.per-file-ignores]
+"examples/*.py" = ["D"]
+"test_*.py" = ["D"]
