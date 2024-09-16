@@ -1,4 +1,4 @@
-"""TODO."""
+"""Sinks for Redis."""
 
 from typing import Any
 
@@ -43,7 +43,11 @@ class _RedisStreamSinkPartition(StatelessSinkPartition[dict[FieldT, EncodableT]]
 
 
 class RedisStreamSink(DynamicSink[dict[FieldT, EncodableT]]):
-    """TODO."""
+    """Redis stream sink.
+
+    This sink takes a stream of dictionaries containing key-value pairs
+    that will be sent to a redis stream defined by the `stream_name` argument.
+    """
 
     def __init__(self, stream_name: str, host: str, port: int, db: int):
         """Initialize the Redis stream sink.
@@ -109,7 +113,11 @@ class _RedisKVSinkPartition(StatelessSinkPartition[tuple[Any, Any]]):
 
 
 class RedisKVSink(DynamicSink[tuple[Any, Any]]):
-    """TODO."""
+    """Redis key-value sink.
+
+    This sink take a stream of (key, value) 2-tuples, and writes every key
+    to the specified Redis instance.
+    """
 
     def __init__(self, host: str = "localhost", port: int = 6379, db: int = 0):
         """Initialize the Redis key-value dynamic sink.
