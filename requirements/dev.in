@@ -9,3 +9,4 @@ ruff
 sphinx-autobuild
 types-docutils
 vermin
+types-redis
