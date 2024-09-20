@@ -68,9 +68,8 @@ class _RedisStreamPartition(StatefulSourcePartition):
 
 
 class RedisStreamSource(FixedPartitionedSource):
-    """Read from a Redis Stream.
+    """Read from a set of Redis Streams.
 
-    Limited to a single partition.
     At-least-once possible if recovery enabled.
     """
 
@@ -93,7 +92,7 @@ class RedisStreamSource(FixedPartitionedSource):
         self.host = host
         self.port = port
         self.db = db
-        assert len(stream_names) != 0, "At least one stream name must be specified"
+        assert len(stream_names) > 0, "At least one stream name must be specified"
         self.stream_names = stream_names
         self.batch_size = batch_size
 

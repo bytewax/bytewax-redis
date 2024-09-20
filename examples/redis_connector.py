@@ -1,4 +1,18 @@
-"""Example usage of redis connector's source and sinks."""
+"""Example usage of redis connector's source and sinks.
+
+There are 3 separate dataflows:
+- `stream_producer_flow` writes some data to a Redis stream.
+- `consumer_flow` reads data from the same Redis stream the previous dataflow wrote to.
+- `kv_producer_flow` writes some keys to a Redis instance.
+
+Run the three dataflows separately:
+```
+$ python -m bytewax.run examples.redis_connector:stream_producer_flow
+$ python -m bytewax.run examples.redis_connector:consumer_flow
+$ python -m bytewax.run examples.redis_connector:kv_producer_flow
+```
+
+"""
 
 import os
 
