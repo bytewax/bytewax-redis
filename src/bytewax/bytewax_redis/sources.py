@@ -99,15 +99,8 @@ class RedisStreamSource(FixedPartitionedSource):
     def list_parts(self) -> list[str]:
         """List all available partitions for the Redis stream source.
 
-        Since this example uses a single Redis stream, only one partition
-        is returned as "singleton".
-
-        :return: A list of available partitions, in this case, a single
-                 partition named as the stream. If you change the name
-                 of the stream between execution with recovery enabled,
-                 the dataflow will crash, as we can't change the output
-                 of list_parts between runs, and we can't recover from
-                 a different stream reusing the index of the older stream.
+        :return: A list of available partitions, in this case, each stream
+                 in `self.stream_names` makes a partition.
         """
         return self.stream_names
 
@@ -126,10 +119,5 @@ class RedisStreamSource(FixedPartitionedSource):
         :return: A `_RedisStreamPartition` object for reading from the Redis stream.
         """
         return _RedisStreamPartition(
-            self.host,
-            self.port,
-            self.db,
-            for_part,
-            self.batch_size,
-            resume_state,
+            self.host, self.port, self.db, for_part, self.batch_size, resume_state
         )

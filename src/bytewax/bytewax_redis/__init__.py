@@ -10,7 +10,7 @@ __all__ = ["RedisKVSink", "RedisStreamSink", "RedisStreamSource"]
 
 if "BYTEWAX_LICENSE" not in os.environ:
     msg = (
-        "`bytewax_redis` is commercially licensed "
+        "`bytewax-redis` is commercially licensed "
         "with publicly available source code.\n"
         "You are welcome to prototype using this module for free, "
         "but any use on business data requires a paid license.\n"

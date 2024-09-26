@@ -66,11 +66,12 @@ extensions = [
 ]
 
 intersphinx_mapping = {
-    "bytewax": ("https://docs.bytewax.io/latest/", None),
-    "myst": ("https://myst-parser.readthedocs.io/en/latest/", None),
-    "python": ("https://docs.python.org/3/", None),
-    "sphinx": ("https://www.sphinx-doc.org/en/master/", None),
-    "typing_extensions": ("https://typing-extensions.readthedocs.io/en/latest/", None),
+    "bytewax": ("https://docs.bytewax.io/latest", None),
+    "myst": ("https://myst-parser.readthedocs.io/en/latest", None),
+    "python": ("https://docs.python.org/3", None),
+    "sphinx": ("https://www.sphinx-doc.org/en/master", None),
+    "typing_extensions": ("https://typing-extensions.readthedocs.io/en/latest", None),
+    "redis": ("https://redis-py.readthedocs.io/en/stable", None),
 }
 templates_path = ["_templates"]
 
@@ -185,14 +186,14 @@ myst_substitutions = {
 }
 myst_url_schemes = {
     "gh-issue": {
-        "url": "https://github.com/bytewax/bytewax_redis/issues/"
+        "url": "https://github.com/bytewax/bytewax-redis/issues/"
         "{{ path }}#{{ fragment }}",
         "title": "Issue #{{path}}",
         "classes": ["github"],
     },
     "gh-path": {
-        "url": f"https://github.com/bytewax/bytewax_redis/blob/{git_id}" "#{path}}#",
-        "title": "bytewax/bytewax_redis{{ path }}",
+        "url": f"https://github.com/bytewax/bytewax-redis/blob/{git_id}" "#{path}}#",
+        "title": "bytewax/bytewax-redis{{ path }}",
         "classes": ["github"],
     },
     "http": None,

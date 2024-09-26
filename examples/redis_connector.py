@@ -28,7 +28,7 @@ REDIS_STREAM_NAME = os.environ.get("REDIS_STREAM_NAME", "example-stream")
 
 # This dataflow writes to a stream in redis.
 stream_producer_flow = Dataflow("redis-stream-producer")
-stream_data = [
+stream_data: list[dict] = [
     {"field-1": 1},
     {"field-1": 2},
     {"field-1": 3},

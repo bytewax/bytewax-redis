@@ -1,6 +1,6 @@
-[![Actions Status](https://github.com/bytewax/bytewax_redis/workflows/CI/badge.svg)](https://github.com/bytewax/bytewax_redis/actions)
-[![PyPI](https://img.shields.io/pypi/v/bytewax_redis.svg?style=flat-square)](https://pypi.org/project/bytewax_redis/)
-[![Bytewax User Guide](https://img.shields.io/badge/user-guide-brightgreen?style=flat-square)](https://docs.bytewax.io/projects/bytewax_redis/en/stable/)
+[![Actions Status](https://github.com/bytewax/bytewax-redis/workflows/CI/badge.svg)](https://github.com/bytewax/bytewax-redis/actions)
+[![PyPI](https://img.shields.io/pypi/v/bytewax-redis.svg?style=flat-square)](https://pypi.org/project/bytewax-redis/)
+[![Bytewax User Guide](https://img.shields.io/badge/user-guide-brightgreen?style=flat-square)](https://docs.bytewax.io/projects/bytewax-redis/en/stable/)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/6073079/195393689-7334098b-a8cd-4aaa-8791-e4556c25713e.png" width="350">
@@ -102,7 +102,7 @@ Activate your development environment and run the development task:
 
 ## License
 
-`bytewax_redis` is commercially licensed with
+`bytewax-redis` is commercially licensed with
 publicly available source code. You are welcome to prototype using
 this module for free, but any use on business data requires a paid
 license. See https://modules.bytewax.io/ for a license. Please see the

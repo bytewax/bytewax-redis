@@ -14,8 +14,8 @@ Description: A Bytewax connector for Redis
 
 ### Technical Details
 Compatibility: Requires Bytewax > 0.21
-[Installation and Usage Documentation](https://github.com/bytewax/bytewax_redis/blob/main/README.md)
+[Installation and Usage Documentation](https://github.com/bytewax/bytewax-redis/blob/main/README.md)
 
 ### Additional Resources
-[GitHub Repository](https://github.com/bytewax/bytewax_redis/)
+[GitHub Repository](https://github.com/bytewax/bytewax-redis/)
 [Support Forum](https://join.slack.com/t/bytewaxcommunity/shared_invite/zt-1lhq9bxbr-T3CXxR_9RIUGb4qcBK26Qw)

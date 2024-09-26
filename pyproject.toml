@@ -24,13 +24,13 @@ classifiers = [
 
 dependencies = [
   "bytewax>=0.21",
-  "redis>=5.0",
+  "redis[hiredis]>=5.0",
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/bytewax/bytewax_redis"
-"Bug Reports" = "https://github.com/bytewax/bytewax_redis/issues/new"
-"Source" = "https://github.com/bytewax/bytewax_redis/"
+"Homepage" = "https://github.com/bytewax/bytewax-redis"
+"Bug Reports" = "https://github.com/bytewax/bytewax-redis/issues/new"
+"Source" = "https://github.com/bytewax/bytewax-redis/"
 
 [build-system]
 requires = ["setuptools>=43.0.0", "wheel"]
