@@ -10,13 +10,7 @@ from bytewax.dataflow import Dataflow
 from bytewax.testing import TestingSink, TestingSource, run_main
 
 
-@mark.skipif(
-    os.environ.get("REDIS_HOST") is None
-    or os.environ.get("REDIS_PORT") is None
-    or os.environ.get("REDIS_DB") is None
-    or os.environ.get("REDIS_STREAM") is None,
-    reason="A running Redis instance has to be configured for this test",
-)
+@mark.integration
 def test_redis_stream_roundtrip() -> None:
     # Get redis config values.
     redis_host = os.environ.get("REDIS_HOST", "localhost")
@@ -78,12 +72,7 @@ def test_redis_stream_roundtrip() -> None:
     assert out == expected
 
 
-@mark.skipif(
-    os.environ.get("REDIS_HOST") is None
-    or os.environ.get("REDIS_PORT") is None
-    or os.environ.get("REDIS_DB") is None,
-    reason="A running Redis instance has to be configured for this test",
-)
+@mark.integration
 def test_kv_sink() -> None:
     # Get redis config values.
     redis_host = os.environ.get("REDIS_HOST", "localhost")
@@ -112,3 +101,8 @@ def test_kv_sink() -> None:
     # Now check that the data is there
     assert redis_conn.get("key-1") == b"3"
     assert redis_conn.get("key-2") == b"5"
+
+
+# Test here to avoid exit code 5 from Pytest runs
+def test_placeholder() -> None:
+    pass
