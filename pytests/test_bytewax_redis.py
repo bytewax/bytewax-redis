@@ -5,7 +5,7 @@ import redis
 from pytest import mark
 
 from bytewax import operators as op
-from bytewax.bytewax_redis import RedisStreamSink, RedisStreamSource, RedisKVSink
+from bytewax.bytewax_redis import RedisKVSink, RedisStreamSink, RedisStreamSource
 from bytewax.dataflow import Dataflow
 from bytewax.testing import TestingSink, TestingSource, run_main
 
