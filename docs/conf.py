@@ -85,8 +85,8 @@ nitpicky = True
 # avoid giving a warning for missing xref for the typevars.
 # Inspired by what astropy do: https://stackoverflow.com/a/30624034
 nitpick_ignore = [
-    ("py:class", "redis.typing.EncodableT"),
-    ("py:class", "redis.typing.FieldT"),
+    ("py:obj", "redis.typing.EncodableT"),
+    ("py:obj", "redis.typing.FieldT"),
 ]
 
 # -- Options for HTML output -------------------------------------------------
