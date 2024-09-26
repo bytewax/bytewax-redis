@@ -81,6 +81,13 @@ highlight_language = "text"
 
 # Warn on missing xrefs.
 nitpicky = True
+# Since the fields are not documented on redis' docs,
+# avoid giving a warning for missing xref for the typevars.
+# Inspired by what astropy do: https://stackoverflow.com/a/30624034
+nitpick_ignore = [
+    ("py:class", "redis.typing.EncodableT"),
+    ("py:class", "redis.typing.FieldT"),
+]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -210,6 +217,9 @@ autodoc2_hidden_objects = [
     "inherited",
     "private",
 ]
+autodoc_type_aliases = {
+    "pathlike ": "module.pathlike ",
+}
 # The build process for API docs has an automatic "pre-build" step
 # which parses the Python code and then writes out Markdown files with
 # the directives for all the objects. Those Markdown files are in this
