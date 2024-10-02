@@ -128,9 +128,9 @@ hiredis==3.0.0 \
     --hash=sha256:fe91d62b0594db5ea7d23fc2192182b1a7b6973f628a9b8b2e0a42a2be721ac6 \
     --hash=sha256:fed8581ae26345dea1f1e0d1a96e05041a727a45e7d8d459164583e23c6ac441
     # via redis
-prometheus-client==0.20.0 \
-    --hash=sha256:287629d00b147a32dcb2be0b9df905da599b2d82f80377083ec8463309a4bb89 \
-    --hash=sha256:cde524a85bce83ca359cc837f28b8c0db5cac7aa653a588fd7e84ba061c329e7
+prometheus-client==0.21.0 \
+    --hash=sha256:4fa6b4dd0ac16d58bb587c04b1caae65b8c5043e85f778f42f5f632f6af2e166 \
+    --hash=sha256:96c83c606b71ff2b0a433c98889d275f51ffec6c5e267de37c7a2b5c9aa9233e
     # via bytewax
 redis==5.0.8 \
     --hash=sha256:0c5b10d387568dfe0698c6fad6615750c24170e548ca2deac10c649d463e9870 \
