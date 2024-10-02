@@ -134,7 +134,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/p/bytewax_redis
+      url: https://pypi.org/p/bytewax-redis
     permissions:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
     steps:
@@ -146,5 +146,4 @@ jobs:
     - name: Publish distribution 📦 to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
-        repository-url: https://test.pypi.org/legacy/ # Remove when publishing to PyPI
         skip-existing: true
