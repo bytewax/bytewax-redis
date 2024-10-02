@@ -87,3 +87,5 @@ pyrightconfig.json
 # Devenv stuff
 .devenv.flake.nix
 devenv.*
+
+dump.rdb

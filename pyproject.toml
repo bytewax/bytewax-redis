@@ -1,5 +1,5 @@
 [project]
-name = "bytewax_redis"
+name = "bytewax-redis"
 version = "0.1"
 description = "A Bytewax connector for Redis"
 readme = "README.md"
@@ -37,7 +37,10 @@ requires = ["setuptools>=43.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini_options]
-addopts = "-v"
+addopts = "-v -m \"not integration\""
+markers = [
+    "integration: requires a local redis server",
+]
 
 [tool.mypy]
 disallow_untyped_defs = true
