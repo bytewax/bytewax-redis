@@ -34,7 +34,7 @@ There's probably a package for your OS already.
 
 ### Install `pyenv` and Python 3.12
 
-I suggest using [`pyenv`](https://github.com/pyenv/pyenv)
+We suggest using [`pyenv`](https://github.com/pyenv/pyenv)
 to manage python versions.
 [the installation instructions](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation).
 
