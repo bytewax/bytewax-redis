@@ -65,10 +65,7 @@ bytewax==0.21.0 \
     --hash=sha256:ece6452ce1c609915447402214714d7392cb7f864ea968a584b649ab8007466d \
     --hash=sha256:f551b2eef7b354b439fd13f62349528c1eff9e59ffbfdf2a7d4fe0141b4ae6ca \
     --hash=sha256:fffebf6ee9ed44f701d16156ce386d2ed2b7d3fe9cf3b381183c49e37ab8639b
-    # via
-    #   -r requirements/lib-py3.12.txt
-    #   bytewax-redis (pyproject.toml)
-    #   bytewax-redis
+    # via bytewax-redis
 certifi==2024.8.30 \
     --hash=sha256:922820b53db7a7257ffbda3f597266d435245903d80737e34f8a45ff3e3230d8 \
     --hash=sha256:bec941d2aa8195e248a60b31ff9f0558284cf01a52591ceda73ea9afffd69fd9
@@ -402,9 +399,7 @@ hiredis==3.0.0 \
     --hash=sha256:fcecbd39bd42cef905c0b51c9689c39d0cc8b88b1671e7f40d4fb213423aef3a \
     --hash=sha256:fe91d62b0594db5ea7d23fc2192182b1a7b6973f628a9b8b2e0a42a2be721ac6 \
     --hash=sha256:fed8581ae26345dea1f1e0d1a96e05041a727a45e7d8d459164583e23c6ac441
-    # via
-    #   -r requirements/lib-py3.12.txt
-    #   redis
+    # via redis
 identify==2.6.1 \
     --hash=sha256:53863bcac7caf8d2ed85bd20312ea5dcfc22226800f6d6881f232d861db5a8f0 \
     --hash=sha256:91478c5fb7c3aac5ff7bf9b4344f803843dc586832d5f110d672b19aa1984c98
@@ -647,9 +642,7 @@ pre-commit==3.8.0 \
 prometheus-client==0.20.0 \
     --hash=sha256:287629d00b147a32dcb2be0b9df905da599b2d82f80377083ec8463309a4bb89 \
     --hash=sha256:cde524a85bce83ca359cc837f28b8c0db5cac7aa653a588fd7e84ba061c329e7
-    # via
-    #   -r requirements/lib-py3.12.txt
-    #   bytewax
+    # via bytewax
 prompt-toolkit==3.0.47 \
     --hash=sha256:0d7bfa67001d5e39d02c224b663abc33687405033a8c422d0d675a5a13361d10 \
     --hash=sha256:1e1b29cb58080b1e69f207c893a1a7bf16d127a5c30c9d17a25a5d77792e5360
@@ -739,38 +732,35 @@ pyyaml==6.0.2 \
     # via
     #   myst-parser
     #   pre-commit
-redis==5.0.8 \
+redis[hiredis]==5.0.8 \
     --hash=sha256:0c5b10d387568dfe0698c6fad6615750c24170e548ca2deac10c649d463e9870 \
     --hash=sha256:56134ee08ea909106090934adc36f65c9bcbbaecea5b21ba704ba6fb561f8eb4
-    # via
-    #   -r requirements/lib-py3.12.txt
-    #   bytewax-redis (pyproject.toml)
-    #   bytewax-redis
+    # via bytewax-redis
 requests==2.32.3 \
     --hash=sha256:55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760 \
     --hash=sha256:70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6
     # via
     #   -r requirements/doctest.in
     #   sphinx
-ruff==0.6.6 \
-    --hash=sha256:0adb801771bc1f1b8cf4e0a6fdc30776e7c1894810ff3b344e50da82ef50eeb1 \
-    --hash=sha256:0fc030b6fd14814d69ac0196396f6761921bd20831725c7361e1b8100b818034 \
-    --hash=sha256:2653fc3b2a9315bd809725c88dd2446550099728d077a04191febb5ea79a4f79 \
-    --hash=sha256:488f8e15c01ea9afb8c0ba35d55bd951f484d0c1b7c5fd746ce3c47ccdedce68 \
-    --hash=sha256:4b4d32c137bc781c298964dd4e52f07d6f7d57c03eae97a72d97856844aa510a \
-    --hash=sha256:515a698254c9c47bb84335281a170213b3ee5eb47feebe903e1be10087a167ce \
-    --hash=sha256:59627e97364329e4eae7d86fa7980c10e2b129e2293d25c478ebcb861b3e3fd6 \
-    --hash=sha256:69c546f412dfae8bb9cc4f27f0e45cdd554e42fecbb34f03312b93368e1cd0a6 \
-    --hash=sha256:6bb1b4995775f1837ab70f26698dd73852bbb82e8f70b175d2713c0354fe9182 \
-    --hash=sha256:704da526c1e137f38c8a067a4a975fe6834b9f8ba7dbc5fd7503d58148851b8f \
-    --hash=sha256:94c3f78c3d32190aafbb6bc5410c96cfed0a88aadb49c3f852bbc2aa9783a7d8 \
-    --hash=sha256:a4c0698cc780bcb2c61496cbd56b6a3ac0ad858c966652f7dbf4ceb029252fbe \
-    --hash=sha256:aadf81ddc8ab5b62da7aae78a91ec933cbae9f8f1663ec0325dae2c364e4ad84 \
-    --hash=sha256:aefb0bd15f1cfa4c9c227b6120573bb3d6c4ee3b29fb54a5ad58f03859bc43c6 \
-    --hash=sha256:bb858cd9ce2d062503337c5b9784d7b583bcf9d1a43c4df6ccb5eab774fbafcb \
-    --hash=sha256:e368aef0cc02ca3593eae2fb8186b81c9c2b3f39acaaa1108eb6b4d04617e61f \
-    --hash=sha256:efeede5815a24104579a0f6320660536c5ffc1c91ae94f8c65659af915fb9de9 \
-    --hash=sha256:f5bc5398457484fc0374425b43b030e4668ed4d2da8ee7fdda0e926c9f11ccfb
+ruff==0.7.4 \
+    --hash=sha256:00b4cf3a6b5fad6d1a66e7574d78956bbd09abfd6c8a997798f01f5da3d46a05 \
+    --hash=sha256:0d06218747d361d06fd2fdac734e7fa92df36df93035db3dc2ad7aa9852cb109 \
+    --hash=sha256:0e92dfb5f00eaedb1501b2f906ccabfd67b2355bdf117fea9719fc99ac2145bc \
+    --hash=sha256:11bff065102c3ae9d3ea4dc9ecdfe5a5171349cdd0787c1fc64761212fc9cf1f \
+    --hash=sha256:2e32829c429dd081ee5ba39aef436603e5b22335c3d3fff013cd585806a6486a \
+    --hash=sha256:3bd726099f277d735dc38900b6a8d6cf070f80828877941983a57bca1cd92172 \
+    --hash=sha256:63a569b36bc66fbadec5beaa539dd81e0527cb258b94e29e0531ce41bacc1f20 \
+    --hash=sha256:662a63b4971807623f6f90c1fb664613f67cc182dc4d991471c23c541fee62dd \
+    --hash=sha256:745775c7b39f914238ed1f1b0bebed0b9155a17cd8bc0b08d3c87e4703b990d6 \
+    --hash=sha256:75c53f54904be42dd52a548728a5b572344b50d9b2873d13a3f8c5e3b91f5cac \
+    --hash=sha256:7dbdc7d8274e1422722933d1edddfdc65b4336abf0b16dfcb9dedd6e6a517d06 \
+    --hash=sha256:80094ecd4793c68b2571b128f91754d60f692d64bc0d7272ec9197fdd09bf9ea \
+    --hash=sha256:876f5e09eaae3eb76814c1d3b68879891d6fde4824c015d48e7a7da4cf066a3a \
+    --hash=sha256:997512325c6620d1c4c2b15db49ef59543ef9cd0f4aa8065ec2ae5103cedc7e7 \
+    --hash=sha256:a4919925e7684a3f18e18243cd6bea7cfb8e968a6eaa8437971f681b7ec51478 \
+    --hash=sha256:cd12e35031f5af6b9b93715d8c4f40360070b2041f81273d0527683d5708fce2 \
+    --hash=sha256:cfb365c135b830778dda8c04fb7d4280ed0b984e1aec27f574445231e20d6c63 \
+    --hash=sha256:e0cea28d0944f74ebc33e9f934238f15c758841f9f5edd180b5315c203293452
     # via -r requirements/dev.in
 six==1.16.0 \
     --hash=sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926 \
@@ -879,7 +869,6 @@ typing-extensions==4.12.2 \
     --hash=sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d \
     --hash=sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8
     # via
-    #   -r requirements/lib-py3.12.txt
     #   bytewax
     #   mypy
     #   pydata-sphinx-theme
